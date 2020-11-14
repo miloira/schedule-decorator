@@ -1,6 +1,7 @@
 # schedule-decorator
 
-## 基本用例
+## 例子
+### 执行任务
 ```python
 from schedule_decorator import Timer
 
@@ -12,6 +13,32 @@ def task():
 
 t.run()
 ```
+### 支持异步执行
+```python
+#-*-coding:utf-8-*-
+from schedule_decorator import Timer
+import time
+t = Timer()
+n = 1
+m = 1
+@t.every("1", "s")
+def _():
+    global n
+    print("t1---", n)
+    time.sleep(5)
+    n += 1
+
+@t.every("1", "s")
+def _():
+    global m
+    print("t2---", m)
+    m += 1
+
+t.run()
+
+```
+
+## 参数说明
 ```python
 # 具体时间执行
 # @t.every('1','second')              # 每1秒钟执行一次
