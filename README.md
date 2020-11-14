@@ -1,6 +1,6 @@
 # schedule-decorator
 
-
+## 基本用例
 ```python
 from schedule_decorator import Timer
 
