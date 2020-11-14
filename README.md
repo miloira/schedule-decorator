@@ -18,7 +18,9 @@ t.run()
 #-*-coding:utf-8-*-
 from schedule_decorator import Timer
 import time
+
 t = Timer()
+
 n = 1
 m = 1
 @t.every("1", "s")
