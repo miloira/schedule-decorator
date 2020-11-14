@@ -1,5 +1,5 @@
 # schedule-decorator
-## 安装使用
+## 安装
 ```
 pip install schedule-decorator
 ```
