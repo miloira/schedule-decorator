@@ -1,7 +1,7 @@
 # schedule-decorator
 
 
-‘’’ python
+```python
 from schedule_decorator import Timer
 
 t = Timer()
@@ -11,4 +11,4 @@ def task():
     print("起床啦！")
 
 t.run()
-‘’’
+```
