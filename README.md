@@ -16,7 +16,7 @@ def task():
 
 t.run()
 ```
-### 支持异步执行
+### 支持多线程执行
 ```python
 #-*-coding:utf-8-*-
 from schedule_decorator import Timer
