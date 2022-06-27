@@ -1,1 +1,1 @@
-**A wonderful decorator package from schedule**
+**A wonderful decorator package for schedule**

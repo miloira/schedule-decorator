@@ -6,7 +6,7 @@ with open("README.md","r",encoding="utf-8") as f:
 
 setup(
     name="schedule-decorator",
-    version="2.1.1",
+    version="2.1.2",
     description="A wonderful decorator package from schedule!",
     long_description_content_type="text/markdown",
     long_description=desc,

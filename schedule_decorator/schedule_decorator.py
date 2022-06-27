@@ -131,7 +131,9 @@ class Crontab:
                     setattr(self, attr_name, attr_name_func_dict)
                 else:
                     setattr(self, attr_name, func_time_dict)
-                self.funcs_time_attrs.append(attr_name)
+
+                if attr_name not in self.funcs_time_attrs:
+                    self.funcs_time_attrs.append(attr_name)
             else:
                 raise Exception('timer_type error!')
 
@@ -216,3 +218,20 @@ class Crontab:
 
 
 cron = Crontab()
+
+
+if __name__ == '__main__':
+    x = 0
+    @cron.every('1', 'seconds')
+    def task():
+        global x
+        x = x + 1
+        print(x)
+
+
+    @cron.every('5', 'seconds')
+    def task():
+        print('------------')
+
+
+    cron.run()
